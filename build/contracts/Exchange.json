@@ -1,0 +1,2045 @@
+{
+  "contractName": "Exchange",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amountInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "depositEther",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function",
+      "signature": "0x26839f17"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "amountInWei",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawEther",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x3bed33ce"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getEthBalanceInWei",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x1a8eb72b"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"getEthBalanceInWei\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"amountInWei\",\"type\":\"uint256\"}],\"name\":\"depositEther\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"amountInWei\",\"type\":\"uint256\"}],\"name\":\"withdrawEther\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{\"depositEther(uint256)\":{\"notice\":\"///////////////////////////////\"}}}},\"settings\":{\"compilationTarget\":{\"/Applications/Node/Ba-Exchange/blockchain/contracts/Exchange.sol\":\"Exchange\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Applications/Node/Ba-Exchange/blockchain/contracts/Exchange.sol\":{\"keccak256\":\"0x3481fb7b90762d73cc657af55d49f795659de6209cb7e78e4108098db58cb6e2\",\"urls\":[\"bzzr://3c2ebc2f4dad5a430b2a3af437c32de67b552e4bf069a9816bfe109e3ded6b11\"]},\"/Applications/Node/Ba-Exchange/blockchain/contracts/libExchangeFunc.sol\":{\"keccak256\":\"0x34cff3dfab479cfb8aa812f02e9bfee07e1165b565ec1ad32bdcac88f94bd392\",\"urls\":[\"bzzr://13058ef1a93ad8326afc118fea08878ed97f9ea3cb2c47bf6de21509db5b7070\"]},\"/Applications/Node/Ba-Exchange/blockchain/contracts/libExchangeStruct.sol\":{\"keccak256\":\"0xa79949136b42109e0af2b1431e4fcd92d0b0b9baa7591145180267aa2fc80870\",\"urls\":[\"bzzr://eb00e8bf7e3694af77a9abf821c37671b7a68e79dc197aa1d863379941087a75\"]},\"/Applications/Node/Ba-Exchange/blockchain/contracts/libToken.sol\":{\"keccak256\":\"0x90b5d8b0e928d81ecdbbd23fb18a99516778b9bbc6b89ffcce6a205679cff86c\",\"urls\":[\"bzzr://cfc51116e93f8af990a8c194116dc424202810f69cf8489b4de91ebaa42a322d\"]},\"/Applications/Node/Ba-Exchange/blockchain/contracts/owned.sol\":{\"keccak256\":\"0x257a4a76d2844901049e954aef967ec05084e1a7e2243425b1d474cb16e4807f\",\"urls\":[\"bzzr://bc7fcab66bbfe08d58814958b96f9e7d6195151dc7241362f31b891b3f2386ac\"]}},\"version\":1}",
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506104ed806100536000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a8eb72b1461005c57806326839f17146100875780633bed33ce146100cd575b600080fd5b34801561006857600080fd5b50610071610120565b6040518082815260200191505060405180910390f35b6100b36004803603602081101561009d57600080fd5b8101908080359060200190929190505050610131565b604051808215151515815260200191505060405180910390f35b3480156100d957600080fd5b50610106600480360360208110156100f057600080fd5b8101908080359060200190929190505050610145565b604051808215151515815260200191505060405180910390f35b600061012c6001610159565b905090565b600061013e6001836101a4565b9050919050565b60006101526001836102e8565b9050919050565b60008160030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008260030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054828460030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054011015151561023957600080fd5b818360030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167f42dbebeb8f6fb795e3007753aef2d4b1a292dd123f6de06a41050186741506378342604051808381526020018281526020019250505060405180910390a26001905092915050565b600080828460030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054031015151561033c57600080fd5b8260030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054828460030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205403111515156103cf57600080fd5b818360030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f19350505050158015610464573d6000803e3d6000fd5b503373ffffffffffffffffffffffffffffffffffffffff167fac9513adf40097763b4664bee3693d0f051127c5ac55e33f68926c1612ac59958342604051808381526020018281526020019250505060405180910390a29291505056fea165627a7a72305820f33c1b060413f7c6209da3600639ecf489336484e6c8bc184164dc403b6fe0b60029",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631a8eb72b1461005c57806326839f17146100875780633bed33ce146100cd575b600080fd5b34801561006857600080fd5b50610071610120565b6040518082815260200191505060405180910390f35b6100b36004803603602081101561009d57600080fd5b8101908080359060200190929190505050610131565b604051808215151515815260200191505060405180910390f35b3480156100d957600080fd5b50610106600480360360208110156100f057600080fd5b8101908080359060200190929190505050610145565b604051808215151515815260200191505060405180910390f35b600061012c6001610159565b905090565b600061013e6001836101a4565b9050919050565b60006101526001836102e8565b9050919050565b60008160030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020549050919050565b60008260030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054828460030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054011015151561023957600080fd5b818360030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825401925050819055503373ffffffffffffffffffffffffffffffffffffffff167f42dbebeb8f6fb795e3007753aef2d4b1a292dd123f6de06a41050186741506378342604051808381526020018281526020019250505060405180910390a26001905092915050565b600080828460030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054031015151561033c57600080fd5b8260030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002054828460030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000205403111515156103cf57600080fd5b818360030160003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600082825403925050819055503373ffffffffffffffffffffffffffffffffffffffff166108fc839081150290604051600060405180830381858888f19350505050158015610464573d6000803e3d6000fd5b503373ffffffffffffffffffffffffffffffffffffffff167fac9513adf40097763b4664bee3693d0f051127c5ac55e33f68926c1612ac59958342604051808381526020018281526020019250505060405180910390a29291505056fea165627a7a72305820f33c1b060413f7c6209da3600639ecf489336484e6c8bc184164dc403b6fe0b60029",
+  "sourceMap": "124:34688:0:-;;;196:10:6;188:5;;:18;;;;;;;;;;;;;;;;;;124:34688:0;;;;;;",
+  "deployedSourceMap": "124:34688:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;683:124;;8:9:-1;5:2;;;30:1;27;20:12;5:2;683:124:0;;;;;;;;;;;;;;;;;;;;;;;371:153;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;371:153:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;530:147;;8:9:-1;5:2;;;30:1;27;20:12;5:2;530:147:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;530:147:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;683:124;734:4;756:44;790:9;756:33;:44::i;:::-;749:51;;683:124;:::o;371:153::-;435:12;466:51;494:9;505:11;466:27;:51::i;:::-;459:58;;371:153;;;:::o;530:147::-;587:12;618:52;647:9;658:11;618:28;:52::i;:::-;611:59;;530:147;;;:::o;2363:158:2:-;2455:4;2477;:25;;:37;2503:10;2477:37;;;;;;;;;;;;;;;;2470:44;;2363:158;;;:::o;1518:372::-;1617:4;1696;:25;;:37;1722:10;1696:37;;;;;;;;;;;;;;;;1681:11;1641:4;:25;;:37;1667:10;1641:37;;;;;;;;;;;;;;;;:51;:92;;1633:101;;;;;;;;1785:11;1744:4;:25;;:37;1770:10;1744:37;;;;;;;;;;;;;;;;:52;;;;;;;;;;;1833:10;1811:51;;;1845:11;1858:3;1811:51;;;;;;;;;;;;;;;;;;;;;;;;1879:4;1872:11;;1518:372;;;;:::o;1896:461::-;1996:4;2075:1;2060:11;2020:4;:25;;:37;2046:10;2020:37;;;;;;;;;;;;;;;;:51;:56;;2012:65;;;;;;;;2150:4;:25;;:37;2176:10;2150:37;;;;;;;;;;;;;;;;2135:11;2095:4;:25;;:37;2121:10;2095:37;;;;;;;;;;;;;;;;:51;:92;;2087:101;;;;;;;;2239:11;2198:4;:25;;:37;2224:10;2198:37;;;;;;;;;;;;;;;;:52;;;;;;;;;;;2260:10;:19;;:32;2280:11;2260:32;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;2260:32:2;2321:10;2307:43;;;2333:11;2346:3;2307:43;;;;;;;;;;;;;;;;;;;;;;;;1896:461;;;;:::o",
+  "source": "pragma solidity >=0.4.22 <0.6.0;\n\nimport \"./owned.sol\";\nimport \"./libExchangeFunc.sol\";\nimport \"./libExchangeStruct.sol\";\n\n\ncontract Exchange is owned {\n     using ExchangeStruct for ExchangeStruct.DataToken;\n    ExchangeStruct.DataToken tokenData;\n\n    //////////////////////////////////\n    // DEPOSIT AND WITHDRAWAL ETHER //\n    //////////////////////////////////\n    function depositEther(uint amountInWei) public payable returns (bool success) {\n        return ExchangeFunc._depositEther_(tokenData, amountInWei);\n    }\n\n    function withdrawEther(uint amountInWei) public returns (bool success) {\n        return ExchangeFunc._withdrawEther_(tokenData, amountInWei);\n    }\n\n    function getEthBalanceInWei() view public returns (uint){\n        return ExchangeFunc._getEthBalanceInWei_(tokenData);\n    }\n\n\n    // //////////////////////\n    // // TOKEN MANAGEMENT //\n    // //////////////////////\n\n    // // function addToken(string memory symbolName, address erc20TokenAddress) public onlyowner {\n    // //     require(!hasToken(symbolName));\n    // //     require(tokenIndex + 1 > tokenIndex);\n    // //     tokenIndex++;\n\n    // //     tokens[tokenIndex].symbolName = symbolName;\n    // //     tokens[tokenIndex].tokenContract = erc20TokenAddress;\n    // //     emit TokenAddedToSystem(tokenIndex, symbolName, now);\n    // // }\n\n    // function createToken (string memory _symbol, string memory _name, uint256 _supply, uint8 _rate, string memory _currency) public {\n    //     require(!hasToken(_symbol), 'Symbol Has already been created');\n    //     require(tokenIndex + 1 > tokenIndex, 'Error creating token symbol ni sha');\n    //     tokenIndex++;\n\n\t// \tnewToken = new libToken(_symbol, _name, _supply, _rate, _currency);\n\t// \t// tokens[_id] = TokenData(newToken);\n\n    //     tokens[tokenIndex].symbolName = _symbol;\n    //     tokens[tokenIndex].tokenContract = newToken;\n    //     emit TokenAddedToSystem(tokenIndex, _symbol, now);\n\t// }\n\n    \n\n    // function hasToken(string memory symbolName) view public returns (bool) {\n    //     uint8 index = getSymbolIndex(symbolName);\n    //     if (index == 0) {\n    //         return false;\n    //     }\n    //     return true;\n    // }\n\n\n    // function getSymbolIndex(string memory symbolName) internal view returns (uint8) {\n    //     for (uint8 i = 1; i <= tokenIndex; i++) {\n    //         if (stringsEqual(tokens[i].symbolName, symbolName)) {\n    //             return i;\n    //         }\n    //     }\n    //     return 0;\n    // }\n\n\n    // function getSymbolIndexOrThrow(string memory symbolName) public view returns (uint8) {\n    //     uint8 index = getSymbolIndex(symbolName);\n    //     require(index > 0, 'Token does not exist');\n    //     return index;\n    // }\n\n\n    // //////////////////////////////////\n    // // DEPOSIT AND WITHDRAWAL TOKEN //\n    // //////////////////////////////////\n    // function depositToken(string memory symbolName, uint amount) public {\n    //     uint8 symbolNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     require(tokens[symbolNameIndex].tokenContract != libToken(0), 'Token does not have an address: Invalid Token');\n\n    //     ERC20Interface token = ERC20Interface(tokens[symbolNameIndex].tokenContract);\n\n    //     require(token.transferFrom(msg.sender, address(this), amount) == true);\n    //     require(tokenBalanceForAddress[msg.sender][symbolNameIndex] + amount >= tokenBalanceForAddress[msg.sender][symbolNameIndex]);\n    //     tokenBalanceForAddress[msg.sender][symbolNameIndex] += amount;\n    //     emit DepositForTokenReceived(msg.sender, symbolNameIndex, amount, now);\n    // }\n\n    // function withdrawToken(string memory symbolName, uint amount) public {\n    //     uint8 symbolNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     require(tokens[symbolNameIndex].tokenContract != libToken(0));\n\n    //     ERC20Interface token = ERC20Interface(tokens[symbolNameIndex].tokenContract);\n\n    //     require(tokenBalanceForAddress[msg.sender][symbolNameIndex] - amount >= 0);\n    //     require(tokenBalanceForAddress[msg.sender][symbolNameIndex] - amount <= tokenBalanceForAddress[msg.sender][symbolNameIndex]);\n\n    //     tokenBalanceForAddress[msg.sender][symbolNameIndex] -= amount;\n    //     require(token.transfer(msg.sender, amount) == true);\n    //     emit WithdrawalToken(msg.sender, symbolNameIndex, amount, now);\n    // }\n\n    // function getBalance(string memory symbolName) view public returns (uint) {\n    //     uint8 symbolNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     return tokenBalanceForAddress[msg.sender][symbolNameIndex];\n    // }\n\n\n\n    // /////////////////////////////\n    // // ORDER BOOK - BID ORDERS //\n    // /////////////////////////////\n    // function getBuyOrderBook(string memory symbolName) view public returns (uint[] memory, uint[] memory) {\n    //     uint8 tokenNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     uint[] memory arrPricesBuy = new uint[](tokens[tokenNameIndex].amountBuyPrices);\n    //     uint[] memory arrVolumesBuy = new uint[](tokens[tokenNameIndex].amountBuyPrices);\n\n    //     uint whilePrice = tokens[tokenNameIndex].lowestBuyPrice;\n    //     uint counter = 0;\n    //     if (tokens[tokenNameIndex].curBuyPrice > 0) {\n    //         while (whilePrice <= tokens[tokenNameIndex].curBuyPrice) {\n    //             arrPricesBuy[counter] = whilePrice;\n    //             uint volumeAtPrice = 0;\n    //             uint offers_key = 0;\n\n    //             offers_key = tokens[tokenNameIndex].buyBook[whilePrice].offers_key;\n    //             while (offers_key <= tokens[tokenNameIndex].buyBook[whilePrice].offers_length) {\n    //                 volumeAtPrice += tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].amount;\n    //                 offers_key++;\n    //             }\n\n    //             arrVolumesBuy[counter] = volumeAtPrice;\n\n    //             //next whilePrice\n    //             if (whilePrice == tokens[tokenNameIndex].buyBook[whilePrice].higherPrice) {\n    //                 break;\n    //             }\n    //             else {\n    //                 whilePrice = tokens[tokenNameIndex].buyBook[whilePrice].higherPrice;\n    //             }\n    //             counter++;\n\n    //         }\n    //     }\n\n    //     return (arrPricesBuy, arrVolumesBuy);\n\n    // }\n\n\n    // /////////////////////////////\n    // // ORDER BOOK - ASK ORDERS //\n    // /////////////////////////////\n    // function getSellOrderBook(string memory symbolName) view public returns (uint[] memory, uint[] memory) {\n    //     uint8 tokenNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     uint[] memory arrPricesSell = new uint[](tokens[tokenNameIndex].amountSellPrices);\n    //     uint[] memory arrVolumesSell = new uint[](tokens[tokenNameIndex].amountSellPrices);\n    //     uint sellWhilePrice = tokens[tokenNameIndex].curSellPrice;\n    //     uint sellCounter = 0;\n    //     if (tokens[tokenNameIndex].curSellPrice > 0) {\n    //         while (sellWhilePrice <= tokens[tokenNameIndex].highestSellPrice) {\n    //             arrPricesSell[sellCounter] = sellWhilePrice;\n    //             uint sellVolumeAtPrice = 0;\n    //             uint sell_offers_key = 0;\n\n    //             sell_offers_key = tokens[tokenNameIndex].sellBook[sellWhilePrice].offers_key;\n    //             while (sell_offers_key <= tokens[tokenNameIndex].sellBook[sellWhilePrice].offers_length) {\n    //                 sellVolumeAtPrice += tokens[tokenNameIndex].sellBook[sellWhilePrice].offers[sell_offers_key].amount;\n    //                 sell_offers_key++;\n    //             }\n\n    //             arrVolumesSell[sellCounter] = sellVolumeAtPrice;\n\n    //             //next whilePrice\n    //             if (tokens[tokenNameIndex].sellBook[sellWhilePrice].higherPrice == 0) {\n    //                 break;\n    //             }\n    //             else {\n    //                 sellWhilePrice = tokens[tokenNameIndex].sellBook[sellWhilePrice].higherPrice;\n    //             }\n    //             sellCounter++;\n\n    //         }\n    //     }\n\n    //     //sell part\n    //     return (arrPricesSell, arrVolumesSell);\n    // }\n\n\n\n\n\n    // ////////////////////////////\n    // // NEW ORDER - BID ORDER //\n    // ///////////////////////////\n    // function buyToken(string memory symbolName, uint priceInWei, uint amount) public {\n    //     uint8 tokenNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     uint total_amount_ether_necessary = 0;\n\n    //     if (tokens[tokenNameIndex].amountSellPrices == 0 || tokens[tokenNameIndex].curSellPrice > priceInWei) {\n    //         //if we have enough ether, we can buy that:\n    //         total_amount_ether_necessary = amount * priceInWei;\n\n    //         //overflow check\n    //         require(total_amount_ether_necessary >= amount);\n    //         require(total_amount_ether_necessary >= priceInWei);\n    //         require(balanceEthForAddress[msg.sender] >= total_amount_ether_necessary);\n    //         require(balanceEthForAddress[msg.sender] - total_amount_ether_necessary >= 0);\n    //         require(balanceEthForAddress[msg.sender] - total_amount_ether_necessary <= balanceEthForAddress[msg.sender]);\n\n    //         //first deduct the amount of ether from our balance\n    //         balanceEthForAddress[msg.sender] -= total_amount_ether_necessary;\n\n    //         //limit order: we don't have enough offers to fulfill the amount\n\n    //         //add the order to the orderBook\n    //         addBuyOffer(tokenNameIndex, priceInWei, amount, msg.sender);\n    //         //and emit the event.\n    //         emit LimitBuyOrderCreated(tokenNameIndex, msg.sender, amount, priceInWei, tokens[tokenNameIndex].buyBook[priceInWei].offers_length);\n    //     }\n    //     else {\n    //         //market order: current sell price is smaller or equal to buy price!\n\n    //         //1st: find the \"cheapest sell price\" that is lower than the buy amount  [buy: 60@5000] [sell: 50@4500] [sell: 5@5000]\n    //         //2: buy up the volume for 4500\n    //         //3: buy up the volume for 5000\n    //         //if still something remaining -> buyToken\n\n    //         //2: buy up the volume\n    //         //2.1 add ether to seller, add symbolName to buyer until offers_key <= offers_length\n\n    //         uint total_amount_ether_available = 0;\n    //         uint whilePrice = tokens[tokenNameIndex].curSellPrice;\n    //         uint amountNecessary = amount;\n    //         uint offers_key;\n    //         while (whilePrice <= priceInWei && amountNecessary > 0) {//we start with the smallest sell price.\n    //             offers_key = tokens[tokenNameIndex].sellBook[whilePrice].offers_key;\n    //             while (offers_key <= tokens[tokenNameIndex].sellBook[whilePrice].offers_length && amountNecessary > 0) {//and the first order (FIFO)\n    //                 uint volumeAtPriceFromAddress = tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].amount;\n\n    //                 //Two choices from here:\n    //                 //1) one person offers not enough volume to fulfill the market order - we use it up completely and move on to the next person who offers the symbolName\n    //                 //2) else: we make use of parts of what a person is offering - lower his amount, fulfill out order.\n    //                 if (volumeAtPriceFromAddress <= amountNecessary) {\n    //                     total_amount_ether_available = volumeAtPriceFromAddress * whilePrice;\n\n    //                     require(balanceEthForAddress[msg.sender] >= total_amount_ether_available);\n    //                     require(balanceEthForAddress[msg.sender] - total_amount_ether_available <= balanceEthForAddress[msg.sender]);\n    //                     //first deduct the amount of ether from our balance\n    //                     balanceEthForAddress[msg.sender] -= total_amount_ether_available;\n\n    //                     require(tokenBalanceForAddress[msg.sender][tokenNameIndex] + volumeAtPriceFromAddress >= tokenBalanceForAddress[msg.sender][tokenNameIndex]);\n    //                     require(balanceEthForAddress[tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].who] + total_amount_ether_available >= balanceEthForAddress[tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].who]);\n    //                     //overflow check\n    //                     //this guy offers less or equal the volume that we ask for, so we use it up completely.\n    //                     tokenBalanceForAddress[msg.sender][tokenNameIndex] += volumeAtPriceFromAddress;\n    //                     tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].amount = 0;\n    //                     balanceEthForAddress[tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].who] += total_amount_ether_available;\n    //                     tokens[tokenNameIndex].sellBook[whilePrice].offers_key++;\n\n    //                     emit SellOrderFulfilled(tokenNameIndex, volumeAtPriceFromAddress, whilePrice, offers_key);\n\n    //                     amountNecessary -= volumeAtPriceFromAddress;\n    //                 }\n    //                 else {\n    //                     require(tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].amount > amountNecessary);//sanity\n\n    //                     total_amount_ether_necessary = amountNecessary * whilePrice;\n    //                     require(balanceEthForAddress[msg.sender] - total_amount_ether_necessary <= balanceEthForAddress[msg.sender]);\n\n    //                     //first deduct the amount of ether from our balance\n    //                     balanceEthForAddress[msg.sender] -= total_amount_ether_necessary;\n\n    //                     require(balanceEthForAddress[tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].who] + total_amount_ether_necessary >= balanceEthForAddress[tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].who]);\n    //                     //overflow check\n    //                     //this guy offers more than we ask for. We reduce his stack, add the tokens to us and the ether to him.\n    //                     tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].amount -= amountNecessary;\n    //                     balanceEthForAddress[tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].who] += total_amount_ether_necessary;\n    //                     tokenBalanceForAddress[msg.sender][tokenNameIndex] += amountNecessary;\n\n    //                     amountNecessary = 0;\n    //                     //we have fulfilled our order\n    //                     emit SellOrderFulfilled(tokenNameIndex, amountNecessary, whilePrice, offers_key);\n    //                 }\n\n    //                 //if it was the last offer for that price, we have to set the curBuyPrice now lower. Additionally we have one offer less...\n    //                 if (\n    //                 offers_key == tokens[tokenNameIndex].sellBook[whilePrice].offers_length &&\n    //                 tokens[tokenNameIndex].sellBook[whilePrice].offers[offers_key].amount == 0\n    //                 ) {\n\n    //                     tokens[tokenNameIndex].amountSellPrices--;\n    //                     //we have one price offer less here...\n    //                     //next whilePrice\n    //                     if (whilePrice == tokens[tokenNameIndex].sellBook[whilePrice].higherPrice || tokens[tokenNameIndex].buyBook[whilePrice].higherPrice == 0) {\n    //                         tokens[tokenNameIndex].curSellPrice = 0;\n    //                         //we have reached the last price\n    //                     }\n    //                     else {\n    //                         tokens[tokenNameIndex].curSellPrice = tokens[tokenNameIndex].sellBook[whilePrice].higherPrice;\n    //                         tokens[tokenNameIndex].sellBook[tokens[tokenNameIndex].buyBook[whilePrice].higherPrice].lowerPrice = 0;\n    //                     }\n    //                 }\n    //                 offers_key++;\n    //             }\n\n    //             //we set the curSellPrice again, since when the volume is used up for a lowest price the curSellPrice is set there...\n    //             whilePrice = tokens[tokenNameIndex].curSellPrice;\n    //         }\n\n    //         if (amountNecessary > 0) {\n    //             buyToken(symbolName, priceInWei, amountNecessary);\n    //             //add a limit order!\n    //         }\n    //     }\n    // }\n\n\n    // ///////////////////////////\n    // // BID LIMIT ORDER LOGIC //\n    // ///////////////////////////\n    // function addBuyOffer(uint8 _tokenIndex, uint priceInWei, uint amount, address who) internal {\n    //     tokens[_tokenIndex].buyBook[priceInWei].offers_length++;\n    //     tokens[_tokenIndex].buyBook[priceInWei].offers[tokens[_tokenIndex].buyBook[priceInWei].offers_length] = Offer(amount, who);\n\n\n    //     if (tokens[_tokenIndex].buyBook[priceInWei].offers_length == 1) {\n    //         tokens[_tokenIndex].buyBook[priceInWei].offers_key = 1;\n    //         //we have a new buy order - increase the counter, so we can set the getOrderBook array later\n    //         tokens[_tokenIndex].amountBuyPrices++;\n\n\n    //         //lowerPrice and higherPrice have to be set\n    //         uint curBuyPrice = tokens[_tokenIndex].curBuyPrice;\n\n    //         uint lowestBuyPrice = tokens[_tokenIndex].lowestBuyPrice;\n    //         if (lowestBuyPrice == 0 || lowestBuyPrice > priceInWei) {\n    //             if (curBuyPrice == 0) {\n    //                 //there is no buy order yet, we insert the first one...\n    //                 tokens[_tokenIndex].curBuyPrice = priceInWei;\n    //                 tokens[_tokenIndex].buyBook[priceInWei].higherPrice = priceInWei;\n    //                 tokens[_tokenIndex].buyBook[priceInWei].lowerPrice = 0;\n    //             }\n    //             else {\n    //                 //or the lowest one\n    //                 tokens[_tokenIndex].buyBook[lowestBuyPrice].lowerPrice = priceInWei;\n    //                 tokens[_tokenIndex].buyBook[priceInWei].higherPrice = lowestBuyPrice;\n    //                 tokens[_tokenIndex].buyBook[priceInWei].lowerPrice = 0;\n    //             }\n    //             tokens[_tokenIndex].lowestBuyPrice = priceInWei;\n    //         }\n    //         else if (curBuyPrice < priceInWei) {\n    //             //the offer to buy is the highest one, we don't need to find the right spot\n    //             tokens[_tokenIndex].buyBook[curBuyPrice].higherPrice = priceInWei;\n    //             tokens[_tokenIndex].buyBook[priceInWei].higherPrice = priceInWei;\n    //             tokens[_tokenIndex].buyBook[priceInWei].lowerPrice = curBuyPrice;\n    //             tokens[_tokenIndex].curBuyPrice = priceInWei;\n\n    //         }\n    //         else {\n    //             //we are somewhere in the middle, we need to find the right spot first...\n\n    //             uint buyPrice = tokens[_tokenIndex].curBuyPrice;\n    //             bool weFoundIt = false;\n    //             while (buyPrice > 0 && !weFoundIt) {\n    //                 if (\n    //                 buyPrice < priceInWei &&\n    //                 tokens[_tokenIndex].buyBook[buyPrice].higherPrice > priceInWei\n    //                 ) {\n    //                     //set the new order-book entry higher/lowerPrice first right\n    //                     tokens[_tokenIndex].buyBook[priceInWei].lowerPrice = buyPrice;\n    //                     tokens[_tokenIndex].buyBook[priceInWei].higherPrice = tokens[_tokenIndex].buyBook[buyPrice].higherPrice;\n\n    //                     //set the higherPrice'd order-book entries lowerPrice to the current Price\n    //                     tokens[_tokenIndex].buyBook[tokens[_tokenIndex].buyBook[buyPrice].higherPrice].lowerPrice = priceInWei;\n    //                     //set the lowerPrice'd order-book entries higherPrice to the current Price\n    //                     tokens[_tokenIndex].buyBook[buyPrice].higherPrice = priceInWei;\n\n    //                     //set we found it.\n    //                     weFoundIt = true;\n    //                 }\n    //                 buyPrice = tokens[_tokenIndex].buyBook[buyPrice].lowerPrice;\n    //             }\n    //         }\n    //     }\n    // }\n\n\n\n\n    // ////////////////////////////\n    // // NEW ORDER - ASK ORDER //\n    // ///////////////////////////\n    // function sellToken(string memory symbolName, uint priceInWei, uint amount) public {\n    //     uint8 tokenNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     uint total_amount_ether_necessary = 0;\n    //     uint total_amount_ether_available = 0;\n\n\n    //     if (tokens[tokenNameIndex].amountBuyPrices == 0 || tokens[tokenNameIndex].curBuyPrice < priceInWei) {\n\n    //         //if we have enough ether, we can buy that:\n    //         total_amount_ether_necessary = amount * priceInWei;\n\n    //         //overflow check\n    //         require(total_amount_ether_necessary >= amount);\n    //         require(total_amount_ether_necessary >= priceInWei);\n    //         require(tokenBalanceForAddress[msg.sender][tokenNameIndex] >= amount);\n    //         require(tokenBalanceForAddress[msg.sender][tokenNameIndex] - amount >= 0);\n    //         require(balanceEthForAddress[msg.sender] + total_amount_ether_necessary >= balanceEthForAddress[msg.sender]);\n\n    //         //actually subtract the amount of tokens to change it then\n    //         tokenBalanceForAddress[msg.sender][tokenNameIndex] -= amount;\n\n    //         //limit order: we don't have enough offers to fulfill the amount\n\n    //         //add the order to the orderBook\n    //         addSellOffer(tokenNameIndex, priceInWei, amount, msg.sender);\n    //         //and emit the event.\n    //         emit LimitSellOrderCreated(tokenNameIndex, msg.sender, amount, priceInWei, tokens[tokenNameIndex].sellBook[priceInWei].offers_length);\n\n    //     }\n    //     else {\n    //         //market order: current buy price is bigger or equal to sell price!\n\n    //         //1st: find the \"highest buy price\" that is higher than the sell amount  [buy: 60@5000] [buy: 50@4500] [sell: 500@4000]\n    //         //2: sell up the volume for 5000\n    //         //3: sell up the volume for 4500\n    //         //if still something remaining -> sellToken limit order\n\n    //         //2: sell up the volume\n    //         //2.1 add ether to seller, add symbolName to buyer until offers_key <= offers_length\n\n\n    //         uint whilePrice = tokens[tokenNameIndex].curBuyPrice;\n    //         uint amountNecessary = amount;\n    //         uint offers_key;\n    //         while (whilePrice >= priceInWei && amountNecessary > 0) {//we start with the highest buy price.\n    //             offers_key = tokens[tokenNameIndex].buyBook[whilePrice].offers_key;\n    //             while (offers_key <= tokens[tokenNameIndex].buyBook[whilePrice].offers_length && amountNecessary > 0) {//and the first order (FIFO)\n    //                 uint volumeAtPriceFromAddress = tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].amount;\n\n\n    //                 //Two choices from here:\n    //                 //1) one person offers not enough volume to fulfill the market order - we use it up completely and move on to the next person who offers the symbolName\n    //                 //2) else: we make use of parts of what a person is offering - lower his amount, fulfill out order.\n    //                 if (volumeAtPriceFromAddress <= amountNecessary) {\n    //                     total_amount_ether_available = volumeAtPriceFromAddress * whilePrice;\n\n\n    //                     //overflow check\n    //                     require(tokenBalanceForAddress[msg.sender][tokenNameIndex] >= volumeAtPriceFromAddress);\n    //                     //actually subtract the amount of tokens to change it then\n    //                     tokenBalanceForAddress[msg.sender][tokenNameIndex] -= volumeAtPriceFromAddress;\n\n    //                     //overflow check\n    //                     require(tokenBalanceForAddress[msg.sender][tokenNameIndex] - volumeAtPriceFromAddress >= 0);\n    //                     require(tokenBalanceForAddress[tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].who][tokenNameIndex] + volumeAtPriceFromAddress >= tokenBalanceForAddress[tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].who][tokenNameIndex]);\n    //                     require(balanceEthForAddress[msg.sender] + total_amount_ether_available >= balanceEthForAddress[msg.sender]);\n\n    //                     //this guy offers less or equal the volume that we ask for, so we use it up completely.\n    //                     tokenBalanceForAddress[tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].who][tokenNameIndex] += volumeAtPriceFromAddress;\n    //                     tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].amount = 0;\n    //                     balanceEthForAddress[msg.sender] += total_amount_ether_available;\n    //                     tokens[tokenNameIndex].buyBook[whilePrice].offers_key++;\n    //                     emit SellOrderFulfilled(tokenNameIndex, volumeAtPriceFromAddress, whilePrice, offers_key);\n\n\n    //                     amountNecessary -= volumeAtPriceFromAddress;\n    //                 }\n    //                 else {\n    //                     require(volumeAtPriceFromAddress - amountNecessary > 0);\n    //                     //just for sanity\n    //                     total_amount_ether_necessary = amountNecessary * whilePrice;\n    //                     //we take the rest of the outstanding amount\n\n    //                     //overflow check\n    //                     require(tokenBalanceForAddress[msg.sender][tokenNameIndex] >= amountNecessary);\n    //                     //actually subtract the amount of tokens to change it then\n    //                     tokenBalanceForAddress[msg.sender][tokenNameIndex] -= amountNecessary;\n\n    //                     //overflow check\n    //                     require(tokenBalanceForAddress[msg.sender][tokenNameIndex] >= amountNecessary);\n    //                     require(balanceEthForAddress[msg.sender] + total_amount_ether_necessary >= balanceEthForAddress[msg.sender]);\n    //                     require(tokenBalanceForAddress[tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].who][tokenNameIndex] + amountNecessary >= tokenBalanceForAddress[tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].who][tokenNameIndex]);\n\n    //                     //this guy offers more than we ask for. We reduce his stack, add the eth to us and the symbolName to him.\n    //                     tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].amount -= amountNecessary;\n    //                     balanceEthForAddress[msg.sender] += total_amount_ether_necessary;\n    //                     tokenBalanceForAddress[tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].who][tokenNameIndex] += amountNecessary;\n\n    //                     emit SellOrderFulfilled(tokenNameIndex, amountNecessary, whilePrice, offers_key);\n\n    //                     amountNecessary = 0;\n    //                     //we have fulfilled our order\n    //                 }\n\n    //                 //if it was the last offer for that price, we have to set the curBuyPrice now lower. Additionally we have one offer less...\n    //                 if (\n    //                 offers_key == tokens[tokenNameIndex].buyBook[whilePrice].offers_length &&\n    //                 tokens[tokenNameIndex].buyBook[whilePrice].offers[offers_key].amount == 0\n    //                 ) {\n\n    //                     tokens[tokenNameIndex].amountBuyPrices--;\n    //                     //we have one price offer less here...\n    //                     //next whilePrice\n    //                     if (whilePrice == tokens[tokenNameIndex].buyBook[whilePrice].lowerPrice || tokens[tokenNameIndex].buyBook[whilePrice].lowerPrice == 0) {\n    //                         tokens[tokenNameIndex].curBuyPrice = 0;\n    //                         //we have reached the last price\n    //                     }\n    //                     else {\n    //                         tokens[tokenNameIndex].curBuyPrice = tokens[tokenNameIndex].buyBook[whilePrice].lowerPrice;\n    //                         tokens[tokenNameIndex].buyBook[tokens[tokenNameIndex].buyBook[whilePrice].lowerPrice].higherPrice = tokens[tokenNameIndex].curBuyPrice;\n    //                     }\n    //                 }\n    //                 offers_key++;\n    //             }\n\n    //             //we set the curSellPrice again, since when the volume is used up for a lowest price the curSellPrice is set there...\n    //             whilePrice = tokens[tokenNameIndex].curBuyPrice;\n    //         }\n\n    //         if (amountNecessary > 0) {\n    //             sellToken(symbolName, priceInWei, amountNecessary);\n    //             //add a limit order, we couldn't fulfill all the orders!\n    //         }\n\n    //     }\n    // }\n\n\n\n    // ///////////////////////////\n    // // ASK LIMIT ORDER LOGIC //\n    // ///////////////////////////\n    // function addSellOffer(uint8 _tokenIndex, uint priceInWei, uint amount, address who) internal {\n    //     tokens[_tokenIndex].sellBook[priceInWei].offers_length++;\n    //     tokens[_tokenIndex].sellBook[priceInWei].offers[tokens[_tokenIndex].sellBook[priceInWei].offers_length] = Offer(amount, who);\n\n\n    //     if (tokens[_tokenIndex].sellBook[priceInWei].offers_length == 1) {\n    //         tokens[_tokenIndex].sellBook[priceInWei].offers_key = 1;\n    //         //we have a new sell order - increase the counter, so we can set the getOrderBook array later\n    //         tokens[_tokenIndex].amountSellPrices++;\n\n    //         //lowerPrice and higherPrice have to be set\n    //         uint curSellPrice = tokens[_tokenIndex].curSellPrice;\n\n    //         uint highestSellPrice = tokens[_tokenIndex].highestSellPrice;\n    //         if (highestSellPrice == 0 || highestSellPrice < priceInWei) {\n    //             if (curSellPrice == 0) {\n    //                 //there is no sell order yet, we insert the first one...\n    //                 tokens[_tokenIndex].curSellPrice = priceInWei;\n    //                 tokens[_tokenIndex].sellBook[priceInWei].higherPrice = 0;\n    //                 tokens[_tokenIndex].sellBook[priceInWei].lowerPrice = 0;\n    //             }\n    //             else {\n\n    //                 //this is the highest sell order\n    //                 tokens[_tokenIndex].sellBook[highestSellPrice].higherPrice = priceInWei;\n    //                 tokens[_tokenIndex].sellBook[priceInWei].lowerPrice = highestSellPrice;\n    //                 tokens[_tokenIndex].sellBook[priceInWei].higherPrice = 0;\n    //             }\n\n    //             tokens[_tokenIndex].highestSellPrice = priceInWei;\n\n    //         }\n    //         else if (curSellPrice > priceInWei) {\n    //             //the offer to sell is the lowest one, we don't need to find the right spot\n    //             tokens[_tokenIndex].sellBook[curSellPrice].lowerPrice = priceInWei;\n    //             tokens[_tokenIndex].sellBook[priceInWei].higherPrice = curSellPrice;\n    //             tokens[_tokenIndex].sellBook[priceInWei].lowerPrice = 0;\n    //             tokens[_tokenIndex].curSellPrice = priceInWei;\n\n    //         }\n    //         else {\n    //             //we are somewhere in the middle, we need to find the right spot first...\n\n    //             uint sellPrice = tokens[_tokenIndex].curSellPrice;\n    //             bool weFoundIt = false;\n    //             while (sellPrice > 0 && !weFoundIt) {\n    //                 if (\n    //                 sellPrice < priceInWei &&\n    //                 tokens[_tokenIndex].sellBook[sellPrice].higherPrice > priceInWei\n    //                 ) {\n    //                     //set the new order-book entry higher/lowerPrice first right\n    //                     tokens[_tokenIndex].sellBook[priceInWei].lowerPrice = sellPrice;\n    //                     tokens[_tokenIndex].sellBook[priceInWei].higherPrice = tokens[_tokenIndex].sellBook[sellPrice].higherPrice;\n\n    //                     //set the higherPrice'd order-book entries lowerPrice to the current Price\n    //                     tokens[_tokenIndex].sellBook[tokens[_tokenIndex].sellBook[sellPrice].higherPrice].lowerPrice = priceInWei;\n    //                     //set the lowerPrice'd order-book entries higherPrice to the current Price\n    //                     tokens[_tokenIndex].sellBook[sellPrice].higherPrice = priceInWei;\n\n    //                     //set we found it.\n    //                     weFoundIt = true;\n    //                 }\n    //                 sellPrice = tokens[_tokenIndex].sellBook[sellPrice].higherPrice;\n    //             }\n    //         }\n    //     }\n    // }\n\n    // //////////////////////////////\n    // // CANCEL LIMIT ORDER LOGIC //\n    // //////////////////////////////\n    // function cancelOrder(string memory symbolName, bool isSellOrder, uint priceInWei, uint offerKey) public {\n    //     uint8 symbolNameIndex = getSymbolIndexOrThrow(symbolName);\n    //     if (isSellOrder) {\n    //         require(tokens[symbolNameIndex].sellBook[priceInWei].offers[offerKey].who == msg.sender);\n\n    //         uint tokensAmount = tokens[symbolNameIndex].sellBook[priceInWei].offers[offerKey].amount;\n    //         require(tokenBalanceForAddress[msg.sender][symbolNameIndex] + tokensAmount >= tokenBalanceForAddress[msg.sender][symbolNameIndex]);\n\n\n    //         tokenBalanceForAddress[msg.sender][symbolNameIndex] += tokensAmount;\n    //         tokens[symbolNameIndex].sellBook[priceInWei].offers[offerKey].amount = 0;\n    //         emit SellOrderCanceled(symbolNameIndex, priceInWei, offerKey);\n\n    //     }\n    //     else {\n    //         require(tokens[symbolNameIndex].buyBook[priceInWei].offers[offerKey].who == msg.sender);\n    //         uint etherToRefund = tokens[symbolNameIndex].buyBook[priceInWei].offers[offerKey].amount * priceInWei;\n    //         require(balanceEthForAddress[msg.sender] + etherToRefund >= balanceEthForAddress[msg.sender]);\n\n    //         balanceEthForAddress[msg.sender] += etherToRefund;\n    //         tokens[symbolNameIndex].buyBook[priceInWei].offers[offerKey].amount = 0;\n    //         emit BuyOrderCanceled(symbolNameIndex, priceInWei, offerKey);\n    //     }\n    // }\n\n\n\n\n\n\n    ////////////////////////////////\n    // STRING COMPARISON FUNCTION //\n    ////////////////////////////////\n    // function stringsEqual(string memory _a, string memory _b) internal pure returns (bool) {\n    //     return keccak256(_a) == keccak256(_b);\n    // }\n\n    function stringsEqual(string memory _a, string memory _b) pure internal returns (bool) {\n        return keccak256(abi.encode(_a)) == keccak256(abi.encode(_b));\n\t}\n\n\n}\n",
+  "sourcePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/Exchange.sol",
+  "ast": {
+    "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/Exchange.sol",
+    "exportedSymbols": {
+      "Exchange": [
+        75
+      ]
+    },
+    "id": 76,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/owned.sol",
+        "file": "./owned.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 1027,
+        "src": "34:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/libExchangeFunc.sol",
+        "file": "./libExchangeFunc.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 361,
+        "src": "56:31:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/libExchangeStruct.sol",
+        "file": "./libExchangeStruct.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 425,
+        "src": "88:33:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1026,
+              "src": "145:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$1026",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 6,
+            "nodeType": "InheritanceSpecifier",
+            "src": "145:5:0"
+          }
+        ],
+        "contractDependencies": [
+          1026
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 75,
+        "linearizedBaseContracts": [
+          75,
+          1026
+        ],
+        "name": "Exchange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 9,
+            "libraryName": {
+              "contractScope": null,
+              "id": 7,
+              "name": "ExchangeStruct",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 424,
+              "src": "164:14:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExchangeStruct_$424",
+                "typeString": "library ExchangeStruct"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "158:50:0",
+            "typeName": {
+              "contractScope": null,
+              "id": 8,
+              "name": "ExchangeStruct.DataToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 423,
+              "src": "183:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_DataToken_$423_storage_ptr",
+                "typeString": "struct ExchangeStruct.DataToken"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 11,
+            "name": "tokenData",
+            "nodeType": "VariableDeclaration",
+            "scope": 75,
+            "src": "213:34:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_DataToken_$423_storage",
+              "typeString": "struct ExchangeStruct.DataToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 10,
+              "name": "ExchangeStruct.DataToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 423,
+              "src": "213:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_DataToken_$423_storage_ptr",
+                "typeString": "struct ExchangeStruct.DataToken"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 24,
+              "nodeType": "Block",
+              "src": "449:75:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 20,
+                        "name": "tokenData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "494:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 21,
+                        "name": "amountInWei",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "505:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 18,
+                        "name": "ExchangeFunc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 360,
+                        "src": "466:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ExchangeFunc_$360_$",
+                          "typeString": "type(library ExchangeFunc)"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_depositEther_",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 283,
+                      "src": "466:27:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_DataToken_$423_storage_ptr_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (struct ExchangeStruct.DataToken storage pointer,uint256) returns (bool)"
+                      }
+                    },
+                    "id": 22,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "466:51:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 17,
+                  "id": 23,
+                  "nodeType": "Return",
+                  "src": "459:58:0"
+                }
+              ]
+            },
+            "documentation": "///////////////////////////////",
+            "id": 25,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositEther",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13,
+                  "name": "amountInWei",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "393:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:18:0"
+            },
+            "returnParameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "435:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "435:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:14:0"
+            },
+            "scope": 75,
+            "src": "371:153:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 38,
+              "nodeType": "Block",
+              "src": "601:76:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "tokenData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "647:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 35,
+                        "name": "amountInWei",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27,
+                        "src": "658:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 32,
+                        "name": "ExchangeFunc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 360,
+                        "src": "618:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ExchangeFunc_$360_$",
+                          "typeString": "type(library ExchangeFunc)"
+                        }
+                      },
+                      "id": 33,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_withdrawEther_",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 345,
+                      "src": "618:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_DataToken_$423_storage_ptr_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (struct ExchangeStruct.DataToken storage pointer,uint256) returns (bool)"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "618:52:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 31,
+                  "id": 37,
+                  "nodeType": "Return",
+                  "src": "611:59:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 39,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawEther",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27,
+                  "name": "amountInWei",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39,
+                  "src": "553:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "552:18:0"
+            },
+            "returnParameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39,
+                  "src": "587:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "587:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "586:14:0"
+            },
+            "scope": 75,
+            "src": "530:147:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "739:68:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "tokenData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "790:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 44,
+                        "name": "ExchangeFunc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 360,
+                        "src": "756:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ExchangeFunc_$360_$",
+                          "typeString": "type(library ExchangeFunc)"
+                        }
+                      },
+                      "id": 45,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_getEthBalanceInWei_",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 359,
+                      "src": "756:33:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_DataToken_$423_storage_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (struct ExchangeStruct.DataToken storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "756:44:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 43,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "749:51:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 50,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEthBalanceInWei",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "710:2:0"
+            },
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "734:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "734:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "733:6:0"
+            },
+            "scope": 75,
+            "src": "683:124:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 73,
+              "nodeType": "Block",
+              "src": "34733:75:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 71,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 62,
+                              "name": "_a",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 52,
+                              "src": "34771:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 60,
+                              "name": "abi",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1145,
+                              "src": "34760:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_abi",
+                                "typeString": "abi"
+                              }
+                            },
+                            "id": 61,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "encode",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "34760:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                              "typeString": "function () pure returns (bytes memory)"
+                            }
+                          },
+                          "id": 63,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "34760:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        ],
+                        "id": 59,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1152,
+                        "src": "34750:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 64,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "34750:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 68,
+                              "name": "_b",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 54,
+                              "src": "34800:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 66,
+                              "name": "abi",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1145,
+                              "src": "34789:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_abi",
+                                "typeString": "abi"
+                              }
+                            },
+                            "id": 67,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "encode",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "34789:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                              "typeString": "function () pure returns (bytes memory)"
+                            }
+                          },
+                          "id": 69,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "34789:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        ],
+                        "id": 65,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1152,
+                        "src": "34779:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 70,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "34779:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "34750:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 58,
+                  "id": 72,
+                  "nodeType": "Return",
+                  "src": "34743:61:0"
+                }
+              ]
+            },
+            "documentation": "/////////////////////////////",
+            "id": 74,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stringsEqual",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "_a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "34668:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "34668:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "_b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "34686:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "34686:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "34667:36:0"
+            },
+            "returnParameters": {
+              "id": 58,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "34727:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 56,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "34727:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "34726:6:0"
+            },
+            "scope": 75,
+            "src": "34646:162:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 76,
+        "src": "124:34688:0"
+      }
+    ],
+    "src": "0:34813:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/Exchange.sol",
+    "exportedSymbols": {
+      "Exchange": [
+        75
+      ]
+    },
+    "id": 76,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".22",
+          "<",
+          "0.6",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/owned.sol",
+        "file": "./owned.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 1027,
+        "src": "34:21:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/libExchangeFunc.sol",
+        "file": "./libExchangeFunc.sol",
+        "id": 3,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 361,
+        "src": "56:31:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Applications/Node/Ba-Exchange/blockchain/contracts/libExchangeStruct.sol",
+        "file": "./libExchangeStruct.sol",
+        "id": 4,
+        "nodeType": "ImportDirective",
+        "scope": 76,
+        "sourceUnit": 425,
+        "src": "88:33:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 5,
+              "name": "owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1026,
+              "src": "145:5:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_owned_$1026",
+                "typeString": "contract owned"
+              }
+            },
+            "id": 6,
+            "nodeType": "InheritanceSpecifier",
+            "src": "145:5:0"
+          }
+        ],
+        "contractDependencies": [
+          1026
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 75,
+        "linearizedBaseContracts": [
+          75,
+          1026
+        ],
+        "name": "Exchange",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "id": 9,
+            "libraryName": {
+              "contractScope": null,
+              "id": 7,
+              "name": "ExchangeStruct",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 424,
+              "src": "164:14:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ExchangeStruct_$424",
+                "typeString": "library ExchangeStruct"
+              }
+            },
+            "nodeType": "UsingForDirective",
+            "src": "158:50:0",
+            "typeName": {
+              "contractScope": null,
+              "id": 8,
+              "name": "ExchangeStruct.DataToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 423,
+              "src": "183:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_DataToken_$423_storage_ptr",
+                "typeString": "struct ExchangeStruct.DataToken"
+              }
+            }
+          },
+          {
+            "constant": false,
+            "id": 11,
+            "name": "tokenData",
+            "nodeType": "VariableDeclaration",
+            "scope": 75,
+            "src": "213:34:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_struct$_DataToken_$423_storage",
+              "typeString": "struct ExchangeStruct.DataToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 10,
+              "name": "ExchangeStruct.DataToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 423,
+              "src": "213:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_struct$_DataToken_$423_storage_ptr",
+                "typeString": "struct ExchangeStruct.DataToken"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 24,
+              "nodeType": "Block",
+              "src": "449:75:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 20,
+                        "name": "tokenData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "494:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 21,
+                        "name": "amountInWei",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 13,
+                        "src": "505:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 18,
+                        "name": "ExchangeFunc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 360,
+                        "src": "466:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ExchangeFunc_$360_$",
+                          "typeString": "type(library ExchangeFunc)"
+                        }
+                      },
+                      "id": 19,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_depositEther_",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 283,
+                      "src": "466:27:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_DataToken_$423_storage_ptr_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (struct ExchangeStruct.DataToken storage pointer,uint256) returns (bool)"
+                      }
+                    },
+                    "id": 22,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "466:51:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 17,
+                  "id": 23,
+                  "nodeType": "Return",
+                  "src": "459:58:0"
+                }
+              ]
+            },
+            "documentation": "///////////////////////////////",
+            "id": 25,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "depositEther",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 14,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 13,
+                  "name": "amountInWei",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "393:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 12,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "393:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "392:18:0"
+            },
+            "returnParameters": {
+              "id": 17,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 16,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "435:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 15,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "435:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:14:0"
+            },
+            "scope": 75,
+            "src": "371:153:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 38,
+              "nodeType": "Block",
+              "src": "601:76:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 34,
+                        "name": "tokenData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "647:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 35,
+                        "name": "amountInWei",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 27,
+                        "src": "658:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 32,
+                        "name": "ExchangeFunc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 360,
+                        "src": "618:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ExchangeFunc_$360_$",
+                          "typeString": "type(library ExchangeFunc)"
+                        }
+                      },
+                      "id": 33,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_withdrawEther_",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 345,
+                      "src": "618:28:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_struct$_DataToken_$423_storage_ptr_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (struct ExchangeStruct.DataToken storage pointer,uint256) returns (bool)"
+                      }
+                    },
+                    "id": 36,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "618:52:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 31,
+                  "id": 37,
+                  "nodeType": "Return",
+                  "src": "611:59:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 39,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawEther",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 28,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 27,
+                  "name": "amountInWei",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39,
+                  "src": "553:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "553:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "552:18:0"
+            },
+            "returnParameters": {
+              "id": 31,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 30,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 39,
+                  "src": "587:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 29,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "587:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "586:14:0"
+            },
+            "scope": 75,
+            "src": "530:147:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 49,
+              "nodeType": "Block",
+              "src": "739:68:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 46,
+                        "name": "tokenData",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 11,
+                        "src": "790:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_DataToken_$423_storage",
+                          "typeString": "struct ExchangeStruct.DataToken storage ref"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 44,
+                        "name": "ExchangeFunc",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 360,
+                        "src": "756:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_ExchangeFunc_$360_$",
+                          "typeString": "type(library ExchangeFunc)"
+                        }
+                      },
+                      "id": 45,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_getEthBalanceInWei_",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 359,
+                      "src": "756:33:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_struct$_DataToken_$423_storage_ptr_$returns$_t_uint256_$",
+                        "typeString": "function (struct ExchangeStruct.DataToken storage pointer) view returns (uint256)"
+                      }
+                    },
+                    "id": 47,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "756:44:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 43,
+                  "id": 48,
+                  "nodeType": "Return",
+                  "src": "749:51:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 50,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getEthBalanceInWei",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 40,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "710:2:0"
+            },
+            "returnParameters": {
+              "id": 43,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 50,
+                  "src": "734:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "734:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "733:6:0"
+            },
+            "scope": 75,
+            "src": "683:124:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 73,
+              "nodeType": "Block",
+              "src": "34733:75:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    },
+                    "id": 71,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 62,
+                              "name": "_a",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 52,
+                              "src": "34771:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 60,
+                              "name": "abi",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1145,
+                              "src": "34760:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_abi",
+                                "typeString": "abi"
+                              }
+                            },
+                            "id": 61,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "encode",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "34760:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                              "typeString": "function () pure returns (bytes memory)"
+                            }
+                          },
+                          "id": 63,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "34760:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        ],
+                        "id": 59,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1152,
+                        "src": "34750:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 64,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "34750:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "id": 68,
+                              "name": "_b",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 54,
+                              "src": "34800:2:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_string_memory_ptr",
+                                "typeString": "string memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 66,
+                              "name": "abi",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 1145,
+                              "src": "34789:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_abi",
+                                "typeString": "abi"
+                              }
+                            },
+                            "id": 67,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "memberName": "encode",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "34789:10:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_abiencode_pure$__$returns$_t_bytes_memory_ptr_$",
+                              "typeString": "function () pure returns (bytes memory)"
+                            }
+                          },
+                          "id": 69,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "34789:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes_memory_ptr",
+                            "typeString": "bytes memory"
+                          }
+                        ],
+                        "id": 65,
+                        "name": "keccak256",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1152,
+                        "src": "34779:9:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_keccak256_pure$_t_bytes_memory_ptr_$returns$_t_bytes32_$",
+                          "typeString": "function (bytes memory) pure returns (bytes32)"
+                        }
+                      },
+                      "id": 70,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "34779:25:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "34750:54:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 58,
+                  "id": 72,
+                  "nodeType": "Return",
+                  "src": "34743:61:0"
+                }
+              ]
+            },
+            "documentation": "/////////////////////////////",
+            "id": 74,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stringsEqual",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 55,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 52,
+                  "name": "_a",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "34668:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 51,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "34668:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 54,
+                  "name": "_b",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "34686:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 53,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "34686:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "34667:36:0"
+            },
+            "returnParameters": {
+              "id": 58,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 57,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "34727:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 56,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "34727:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "34726:6:0"
+            },
+            "scope": 75,
+            "src": "34646:162:0",
+            "stateMutability": "pure",
+            "superFunction": null,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 76,
+        "src": "124:34688:0"
+      }
+    ],
+    "src": "0:34813:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "1555784248348": {
+      "events": {},
+      "links": {},
+      "address": "0xd4e42301DFA9029183CA8d241C4cbF3c95C7CA4E",
+      "transactionHash": "0x3974db1201cb1d3cacf31b64a238c248e7aa4884b60fdf6fad822c950398b15c"
+    }
+  },
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-20T18:18:52.419Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {
+      "depositEther(uint256)": {
+        "notice": "///////////////////////////////"
+      }
+    }
+  }
+}
